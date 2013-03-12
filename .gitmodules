@@ -1,0 +1,3 @@
+[submodule "hmdb"]
+	path = hmdb
+	url = git@github.com:mazgi/hmdb.git
