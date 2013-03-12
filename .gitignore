@@ -1,0 +1,12 @@
+#--------
+# Xcode workspace
+*.xcworkspace/*
+!*.xcworkspace/contents.xcworkspacedata
+#--------
+# Xcode project
+**/*.xcodeproj/*
+!**/*.xcodeproj/project.pbxproj
+!**/*.xcodeproj/default.*
+#--------
+# eclipse workspace
+.metadata/
