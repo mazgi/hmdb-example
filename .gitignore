@@ -2,7 +2,6 @@
 # Xcode workspace
 *.xcworkspace/*
 !*.xcworkspace/contents.xcworkspacedata
-#--------
 # Xcode project
 **/*.xcodeproj/*
 !**/*.xcodeproj/project.pbxproj
@@ -10,3 +9,8 @@
 #--------
 # eclipse workspace
 .metadata/
+# eclipse projects
+.classpath
+bin/
+gen/
+obj/
