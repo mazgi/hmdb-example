@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:HMDBExample4MacOSX/HMDBExample4MacOSX.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:HMDBExample4IOS/HMDBExample4IOS.xcodeproj">
    </FileRef>
    <Group
