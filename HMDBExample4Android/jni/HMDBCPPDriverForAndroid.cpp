@@ -6,6 +6,7 @@
  */
 
 #include "HMDBCPPDriverForAndroid.h"
+#include "hmdb.hpp"
 
 HMDBCPPDriverForAndroid::HMDBCPPDriverForAndroid() {
 	// TODO Auto-generated constructor stub
