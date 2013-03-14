@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EBF387C216EF853500FCAD7A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBF387C116EF853500FCAD7A /* Foundation.framework */; };
-		EBF387C516EF853500FCAD7A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF387C416EF853500FCAD7A /* main.m */; };
+		EBF387C516EF853500FCAD7A /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = EBF387C416EF853500FCAD7A /* main.mm */; };
 		EBF387C916EF853500FCAD7A /* HMDBExample4MacOSX.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBF387C816EF853500FCAD7A /* HMDBExample4MacOSX.1 */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +28,7 @@
 /* Begin PBXFileReference section */
 		EBF387BE16EF853500FCAD7A /* HMDBExample4MacOSX */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HMDBExample4MacOSX; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBF387C116EF853500FCAD7A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		EBF387C416EF853500FCAD7A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EBF387C416EF853500FCAD7A /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		EBF387C716EF853500FCAD7A /* HMDBExample4MacOSX-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HMDBExample4MacOSX-Prefix.pch"; sourceTree = "<group>"; };
 		EBF387C816EF853500FCAD7A /* HMDBExample4MacOSX.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = HMDBExample4MacOSX.1; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,7 +73,7 @@
 		EBF387C316EF853500FCAD7A /* HMDBExample4MacOSX */ = {
 			isa = PBXGroup;
 			children = (
-				EBF387C416EF853500FCAD7A /* main.m */,
+				EBF387C416EF853500FCAD7A /* main.mm */,
 				EBF387C816EF853500FCAD7A /* HMDBExample4MacOSX.1 */,
 				EBF387C616EF853500FCAD7A /* Supporting Files */,
 			);
@@ -139,7 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBF387C516EF853500FCAD7A /* main.m in Sources */,
+				EBF387C516EF853500FCAD7A /* main.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,7 +151,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
@@ -184,7 +184,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
@@ -242,6 +242,7 @@
 				EBF387CE16EF853500FCAD7A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
