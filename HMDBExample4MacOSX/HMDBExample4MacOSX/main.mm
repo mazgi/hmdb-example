@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#include "hmdb.hpp"
 
 int main(int argc, const char * argv[])
 {
@@ -15,7 +16,9 @@ int main(int argc, const char * argv[])
         
         // insert code here...
         NSLog(@"Hello, World!");
-        
+
+//        hmdb::HMDatabase *db = new hmdb::HMDatabase("/tmp/tmp.db");
+//        delete db;
     }
     return 0;
 }

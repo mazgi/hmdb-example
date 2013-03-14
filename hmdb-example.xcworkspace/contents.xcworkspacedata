@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
-   <Group
-      location = "container:"
-      name = "hmdb">
-      <FileRef
-         location = "group:../hmdb/common">
-      </FileRef>
-   </Group>
+   <FileRef
+      location = "group:hmdb">
+   </FileRef>
    <FileRef
       location = "group:HMDBExample4MacOSX/HMDBExample4MacOSX.xcodeproj">
    </FileRef>
