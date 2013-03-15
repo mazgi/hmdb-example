@@ -13,10 +13,10 @@ int main(int argc, const char * argv[])
 {
     @autoreleasepool {
         using hmdb::HMDatabase;
-        HMDatabase *db = new HMDatabase("/tmp/tmp.db");
+        using hmdb::HMDatabaseRef;
+        HMDatabaseRef db(new HMDatabase("/tmp/tmp.db"));
         db->open();
         db->close();
-        delete db;
     }
     return 0;
 }
