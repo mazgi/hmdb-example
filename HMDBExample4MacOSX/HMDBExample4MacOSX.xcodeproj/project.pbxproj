@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2610FEE116F2BAA6008EF04F /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2610FEE016F2BAA6008EF04F /* libsqlite3.dylib */; };
 		EBF387C216EF853500FCAD7A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBF387C116EF853500FCAD7A /* Foundation.framework */; };
 		EBF387C516EF853500FCAD7A /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = EBF387C416EF853500FCAD7A /* main.mm */; };
 		EBF387C916EF853500FCAD7A /* HMDBExample4MacOSX.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBF387C816EF853500FCAD7A /* HMDBExample4MacOSX.1 */; };
@@ -29,6 +30,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2610FEE016F2BAA6008EF04F /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		EBF387BE16EF853500FCAD7A /* HMDBExample4MacOSX */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HMDBExample4MacOSX; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBF387C116EF853500FCAD7A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EBF387C416EF853500FCAD7A /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
@@ -52,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2610FEE116F2BAA6008EF04F /* libsqlite3.dylib in Frameworks */,
 				EBF387C216EF853500FCAD7A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,6 +83,7 @@
 		EBF387C016EF853500FCAD7A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2610FEE016F2BAA6008EF04F /* libsqlite3.dylib */,
 				EBF387C116EF853500FCAD7A /* Foundation.framework */,
 			);
 			name = Frameworks;

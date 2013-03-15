@@ -11,14 +11,12 @@
 
 int main(int argc, const char * argv[])
 {
-
     @autoreleasepool {
-        
-        // insert code here...
-        NSLog(@"Hello, World!");
-
-//        hmdb::HMDatabase *db = new hmdb::HMDatabase("/tmp/tmp.db");
-//        delete db;
+        using hmdb::HMDatabase;
+        HMDatabase *db = new HMDatabase("/tmp/tmp.db");
+        db->open();
+        db->close();
+        delete db;
     }
     return 0;
 }
