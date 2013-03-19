@@ -31,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		2610FEE016F2BAA6008EF04F /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		262277FF16F8F6AE004D574C /* hmdb-apple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "hmdb-apple.h"; sourceTree = "<group>"; };
 		EBF387BE16EF853500FCAD7A /* HMDBExample4MacOSX */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HMDBExample4MacOSX; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBF387C116EF853500FCAD7A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EBF387C416EF853500FCAD7A /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
@@ -46,7 +47,6 @@
 		EBF6F37716F1DFB800B61522 /* HMResultSet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HMResultSet.cpp; sourceTree = "<group>"; };
 		EBF6F37816F1DFB800B61522 /* HMResultSet.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HMResultSet.hpp; sourceTree = "<group>"; };
 		EBF6F37C16F1DFB800B61522 /* hmdb-android.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "hmdb-android.h"; sourceTree = "<group>"; };
-		EBF6F37F16F1DFB800B61522 /* hmdb-cocoa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "hmdb-cocoa.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,7 +153,7 @@
 		EBF6F37D16F1DFB800B61522 /* apple */ = {
 			isa = PBXGroup;
 			children = (
-				EBF6F37F16F1DFB800B61522 /* hmdb-cocoa.h */,
+				262277FF16F8F6AE004D574C /* hmdb-apple.h */,
 			);
 			path = apple;
 			sourceTree = "<group>";
