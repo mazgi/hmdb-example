@@ -19,21 +19,33 @@ public:
         using hmdb::HMResultSet;
         using hmdb::HMNull;
 
-        bool result = true;
         HMError *err = nullptr;
         HMResultSet *ret = nullptr;
-
         HMDatabaseRef db(new HMDatabase("/tmp/tmp.db"));
-        result = db->open();
-        result = db->executeQuery(err, "DROP TABLE IF EXISTS SAMPLE_TABLE");
-        result &= db->executeQuery(err, "CREATE TABLE SAMPLE_TABLE(IDX INT, KEY TEXT, VALUE TEXT, SCORE REAL)");
-        result &= db->executeQueryForRead(
-                                          err,
-                                          ret,
-                                          "SELECT * FROM T WHERE KEY=? OR VALUE IN (?, ?, ?) OR SCORE > ?",
-                                          1.0, 2, HMNull, "str4", std::string("str5")
-                                          );
-        result &= db->close();
+
+        HMLog("open db:%d", db->open());
+        HMLog("drop table:%d", db->executeQuery(err, "DROP TABLE IF EXISTS SAMPLE_TABLE"));
+        HMLog("crate table:%d", db->executeQuery(err,
+                                                 "CREATE TABLE SAMPLE_TABLE("
+                                                 " DBL_COL REAL,"
+                                                 " INT_COL INT,"
+                                                 " NULL_COL NONE,"
+                                                 " CHAR_COL TEXT,"
+                                                 " STR_COL TEXT"
+                                                 ")"
+                                                 ));
+        HMLog("read:%d", db->executeQueryForRead(
+                                                 err,
+                                                 ret,
+                                                 "SELECT * FROM SAMPLE_TABLE"
+                                                 " WHERE DBL_COL=?"
+                                                 " OR INT_COL > ?"
+                                                 " OR NULL_COL = ?"
+                                                 " OR CHAR_COL = ?"
+                                                 " OR STR_COL IN(?)",
+                                                 1.0, 2, HMNull, "str4", std::string("str5")
+                                                 ));
+        HMLog("close db:%d", db->close());
     }
 };
 
