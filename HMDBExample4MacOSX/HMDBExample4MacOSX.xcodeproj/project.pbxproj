@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		2610FEE116F2BAA6008EF04F /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2610FEE016F2BAA6008EF04F /* libsqlite3.dylib */; };
+		268D7AD216F917ED00A15067 /* HMRecordSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 268D7AD016F917ED00A15067 /* HMRecordSet.cpp */; };
 		EBF387C216EF853500FCAD7A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBF387C116EF853500FCAD7A /* Foundation.framework */; };
 		EBF387C516EF853500FCAD7A /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = EBF387C416EF853500FCAD7A /* main.mm */; };
 		EBF387C916EF853500FCAD7A /* HMDBExample4MacOSX.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBF387C816EF853500FCAD7A /* HMDBExample4MacOSX.1 */; };
 		EBF6F38416F1DFB800B61522 /* HMDatabase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EBF6F37016F1DFB800B61522 /* HMDatabase.cpp */; };
 		EBF6F38516F1DFB800B61522 /* HMError.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EBF6F37516F1DFB800B61522 /* HMError.cpp */; };
-		EBF6F38616F1DFB800B61522 /* HMResultSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EBF6F37716F1DFB800B61522 /* HMResultSet.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +32,8 @@
 /* Begin PBXFileReference section */
 		2610FEE016F2BAA6008EF04F /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		262277FF16F8F6AE004D574C /* hmdb-apple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "hmdb-apple.h"; sourceTree = "<group>"; };
+		268D7AD016F917ED00A15067 /* HMRecordSet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HMRecordSet.cpp; sourceTree = "<group>"; };
+		268D7AD116F917ED00A15067 /* HMRecordSet.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HMRecordSet.hpp; sourceTree = "<group>"; };
 		EBF387BE16EF853500FCAD7A /* HMDBExample4MacOSX */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HMDBExample4MacOSX; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBF387C116EF853500FCAD7A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EBF387C416EF853500FCAD7A /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
@@ -44,8 +46,6 @@
 		EBF6F37416F1DFB800B61522 /* hmdb.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = hmdb.hpp; sourceTree = "<group>"; };
 		EBF6F37516F1DFB800B61522 /* HMError.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HMError.cpp; sourceTree = "<group>"; };
 		EBF6F37616F1DFB800B61522 /* HMError.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HMError.hpp; sourceTree = "<group>"; };
-		EBF6F37716F1DFB800B61522 /* HMResultSet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HMResultSet.cpp; sourceTree = "<group>"; };
-		EBF6F37816F1DFB800B61522 /* HMResultSet.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HMResultSet.hpp; sourceTree = "<group>"; };
 		EBF6F37C16F1DFB800B61522 /* hmdb-android.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "hmdb-android.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,6 +120,8 @@
 		EBF6F36F16F1DFB800B61522 /* common */ = {
 			isa = PBXGroup;
 			children = (
+				268D7AD016F917ED00A15067 /* HMRecordSet.cpp */,
+				268D7AD116F917ED00A15067 /* HMRecordSet.hpp */,
 				EBF6F37016F1DFB800B61522 /* HMDatabase.cpp */,
 				EBF6F37116F1DFB800B61522 /* HMDatabase.hpp */,
 				EBF6F37216F1DFB800B61522 /* hmdb-common.h */,
@@ -127,8 +129,6 @@
 				EBF6F37416F1DFB800B61522 /* hmdb.hpp */,
 				EBF6F37516F1DFB800B61522 /* HMError.cpp */,
 				EBF6F37616F1DFB800B61522 /* HMError.hpp */,
-				EBF6F37716F1DFB800B61522 /* HMResultSet.cpp */,
-				EBF6F37816F1DFB800B61522 /* HMResultSet.hpp */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -212,7 +212,7 @@
 				EBF387C516EF853500FCAD7A /* main.mm in Sources */,
 				EBF6F38416F1DFB800B61522 /* HMDatabase.cpp in Sources */,
 				EBF6F38516F1DFB800B61522 /* HMError.cpp in Sources */,
-				EBF6F38616F1DFB800B61522 /* HMResultSet.cpp in Sources */,
+				268D7AD216F917ED00A15067 /* HMRecordSet.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
