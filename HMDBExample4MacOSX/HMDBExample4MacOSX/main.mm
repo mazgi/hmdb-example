@@ -17,18 +17,23 @@ public:
         using hmdb::HMDatabaseRef;
         using hmdb::HMError;
         using hmdb::HMResultSet;
+        using hmdb::HMNull;
+
+        bool result = true;
         HMError *err = nullptr;
         HMResultSet *ret = nullptr;
 
         HMDatabaseRef db(new HMDatabase("/tmp/tmp.db"));
-        db->open();
-        db->executeQueryWithResults(
-                         err,
-                         ret,
-                         "SELECT * FROM T WHERE KEY=? OR VALUE IN (?, ?, ?) OR SCORE > ?",
-                         1, "value1", "value2", "value3", 1.0
-                         );
-        db->close();
+        result = db->open();
+        result = db->executeQuery(err, "DROP TABLE IF EXISTS SAMPLE_TABLE");
+        result &= db->executeQuery(err, "CREATE TABLE SAMPLE_TABLE(IDX INT, KEY TEXT, VALUE TEXT, SCORE REAL)");
+        result &= db->executeQueryForRead(
+                                          err,
+                                          ret,
+                                          "SELECT * FROM T WHERE KEY=? OR VALUE IN (?, ?, ?) OR SCORE > ?",
+                                          1.0, 2, HMNull, "str4", std::string("str5")
+                                          );
+        result &= db->close();
     }
 };
 
