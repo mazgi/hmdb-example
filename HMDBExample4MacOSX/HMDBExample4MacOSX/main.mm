@@ -16,10 +16,9 @@ public:
         using hmdb::HMDatabase;
         using hmdb::HMDatabaseRef;
         using hmdb::HMError;
-        using hmdb::HMResultSet;
+        using hmdb::HMRecordSet;
 
         HMError *err = nullptr;
-        HMResultSet *ret = nullptr;
         HMDatabaseRef db(new HMDatabase("/tmp/tmp.db"));
 
         HMLog("DB:OPENED[%d]", db->open());
@@ -34,7 +33,7 @@ public:
                                                     " STR_COL TEXT"
                                                     ")"
                                                     ));
-        for (int i = 0; i < 1; i++) {
+        for (int i = 0; i < 10; i++) {
             HMLog("RECORD:CREATED[%d]", db->executeQuery(err,
                                                          "INSERT INTO SAMPLE_TABLE("
                                                          " DBL_COL,"
@@ -47,17 +46,28 @@ public:
                                                          0.0, i, nullptr, "char*[0]", std::string("str[0]")
                                                          ));
         }
-        HMLog("RECORD:READED[%d]", db->executeQueryForRead(
-                                                           err,
-                                                           ret,
-                                                           "SELECT * FROM SAMPLE_TABLE"
-                                                           " WHERE DBL_COL=?"
-                                                           " OR INT_COL > ?"
-                                                           " OR NULL_COL = ?"
-                                                           " OR CHAR_COL = ?"
-                                                           " OR STR_COL IN(?)",
-                                                           1.0, 2, nullptr, "str4", std::string("str5")
-                                                           ));
+        {
+            HMRecordSet *ret = nullptr;
+            HMLog("RECORD:READED[%d]", db->executeQueryForRead(
+                                                               err,
+                                                               ret,
+                                                               "SELECT * FROM SAMPLE_TABLE"
+                                                               " WHERE DBL_COL=?"
+                                                               " OR INT_COL > ?"
+                                                               " OR NULL_COL = ?"
+                                                               " OR CHAR_COL = ?"
+                                                               " OR STR_COL IN(?)",
+                                                               1.0, 2, nullptr, "str4", std::string("str5")
+                                                               ));
+            HMError *fetchErr = nullptr;
+            while (ret->nextRow(fetchErr)) {
+                if (fetchErr) {
+                    //err
+                    break;
+                }
+                ;
+            }
+        }
         for (int i = 0; i < 10; i++) {
             double d = i + 0.1;
             HMLog("RECORD:UPDATED[%d]", db->executeQuery(err,
