@@ -85,7 +85,12 @@ public:
                                                                1.0, 2, nullptr, "str4", std::string("str5")
                                                                ));
             while (reader->next()) {
+                HMLog("ID:%d", reader->intValue("ID"));
                 HMLog("DBL_COL:%f", reader->doubleValue("DBL_COL"));
+                HMLog("INT_COL:%d", reader->intValue("INT_COL"));
+                HMLog("DBL_COL:%s", reader->textValue("NULL_COL"));
+                HMLog("DBL_COL:%s", reader->textValue("CHAR_COL"));
+                HMLog("DBL_COL:%s", reader->textValue("STR_COL"));
             }
         }
         HMLog("BEGIN TRANSACTION[%d]", db->beginTransaction());
