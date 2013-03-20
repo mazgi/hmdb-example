@@ -48,9 +48,6 @@ public:
         }
         {
             HMRecordReader *reader = nullptr;
-            while (reader->next()) {
-//                reader[0];
-            }
             HMLog("RECORD:READED[%d]", db->executeQueryForRead(
                                                                err,
                                                                reader,
@@ -62,6 +59,9 @@ public:
                                                                " OR STR_COL IN(?)",
                                                                1.0, 2, nullptr, "str4", std::string("str5")
                                                                ));
+            while (reader->next()) {
+
+            }
         }
         for (int i = 0; i < 10; i++) {
             double d = i + 0.1;
