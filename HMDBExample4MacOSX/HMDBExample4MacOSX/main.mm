@@ -60,7 +60,7 @@ public:
                                                                1.0, 2, nullptr, "str4", std::string("str5")
                                                                ));
             while (reader->next()) {
-
+                HMLog("DBL_COL:%f", reader->doubleValue("DBL_COL"));
             }
         }
         for (int i = 0; i < 10; i++) {
@@ -70,6 +70,23 @@ public:
                                                          " SET DBL_COL = ?"
                                                          " WHERE INT_COL = ?",
                                                          d, i));
+        }
+        {
+            HMRecordReader *reader = nullptr;
+            HMLog("RECORD:READED[%d]", db->executeQueryForRead(
+                                                               err,
+                                                               reader,
+                                                               "SELECT * FROM SAMPLE_TABLE"
+                                                               " WHERE DBL_COL=?"
+                                                               " OR INT_COL > ?"
+                                                               " OR NULL_COL = ?"
+                                                               " OR CHAR_COL = ?"
+                                                               " OR STR_COL IN(?)",
+                                                               1.0, 2, nullptr, "str4", std::string("str5")
+                                                               ));
+            while (reader->next()) {
+                HMLog("DBL_COL:%f", reader->doubleValue("DBL_COL"));
+            }
         }
         HMLog("BEGIN TRANSACTION[%d]", db->beginTransaction());
         for (int i = 0; i < 10; i += 2) {
