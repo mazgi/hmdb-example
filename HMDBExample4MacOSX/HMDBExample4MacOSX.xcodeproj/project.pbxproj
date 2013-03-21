@@ -11,12 +11,29 @@
 		26D2612A16FB2DA8002E57BB /* HMDatabase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D2611B16FB2DA8002E57BB /* HMDatabase.cpp */; };
 		26D2612B16FB2DA8002E57BB /* HMError.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D2612016FB2DA8002E57BB /* HMError.cpp */; };
 		26D2612C16FB2DA8002E57BB /* HMRecordSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D2612216FB2DA8002E57BB /* HMRecordSet.cpp */; };
+		26D2614C16FB3383002E57BB /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = EBF387C416EF853500FCAD7A /* main.mm */; };
+		26D2614D16FB3383002E57BB /* HMDatabase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D2611B16FB2DA8002E57BB /* HMDatabase.cpp */; };
+		26D2614E16FB3383002E57BB /* HMError.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D2612016FB2DA8002E57BB /* HMError.cpp */; };
+		26D2614F16FB3383002E57BB /* HMRecordSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D2612216FB2DA8002E57BB /* HMRecordSet.cpp */; };
+		26D2615116FB3383002E57BB /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2610FEE016F2BAA6008EF04F /* libsqlite3.dylib */; };
+		26D2615216FB3383002E57BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBF387C116EF853500FCAD7A /* Foundation.framework */; };
+		26D2615416FB3383002E57BB /* HMDBExample4MacOSX.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBF387C816EF853500FCAD7A /* HMDBExample4MacOSX.1 */; };
 		EBF387C216EF853500FCAD7A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBF387C116EF853500FCAD7A /* Foundation.framework */; };
 		EBF387C516EF853500FCAD7A /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = EBF387C416EF853500FCAD7A /* main.mm */; };
 		EBF387C916EF853500FCAD7A /* HMDBExample4MacOSX.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBF387C816EF853500FCAD7A /* HMDBExample4MacOSX.1 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		26D2615316FB3383002E57BB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				26D2615416FB3383002E57BB /* HMDBExample4MacOSX.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		EBF387BC16EF853500FCAD7A /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -47,7 +64,8 @@
 		26D2612416FB2DA8002E57BB /* hmdb.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = hmdb.hpp; sourceTree = "<group>"; };
 		26D2612716FB2DA8002E57BB /* hmdb-android.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "hmdb-android.h"; sourceTree = "<group>"; };
 		26D2612916FB2DA8002E57BB /* hmdb-apple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "hmdb-apple.h"; sourceTree = "<group>"; };
-		EBF387BE16EF853500FCAD7A /* HMDBExample4MacOSX */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HMDBExample4MacOSX; sourceTree = BUILT_PRODUCTS_DIR; };
+		26D2615816FB3383002E57BB /* C++98 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "C++98"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBF387BE16EF853500FCAD7A /* C++11 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "C++11"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBF387C116EF853500FCAD7A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EBF387C416EF853500FCAD7A /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		EBF387C716EF853500FCAD7A /* HMDBExample4MacOSX-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HMDBExample4MacOSX-Prefix.pch"; sourceTree = "<group>"; };
@@ -55,6 +73,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		26D2615016FB3383002E57BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26D2615116FB3383002E57BB /* libsqlite3.dylib in Frameworks */,
+				26D2615216FB3383002E57BB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EBF387BB16EF853500FCAD7A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -176,7 +203,8 @@
 		EBF387BF16EF853500FCAD7A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EBF387BE16EF853500FCAD7A /* HMDBExample4MacOSX */,
+				EBF387BE16EF853500FCAD7A /* C++11 */,
+				26D2615816FB3383002E57BB /* C++98 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -211,9 +239,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EBF387BD16EF853500FCAD7A /* HMDBExample4MacOSX */ = {
+		26D2614A16FB3383002E57BB /* C++98 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EBF387CC16EF853500FCAD7A /* Build configuration list for PBXNativeTarget "HMDBExample4MacOSX" */;
+			buildConfigurationList = 26D2615516FB3383002E57BB /* Build configuration list for PBXNativeTarget "C++98" */;
+			buildPhases = (
+				26D2614B16FB3383002E57BB /* Sources */,
+				26D2615016FB3383002E57BB /* Frameworks */,
+				26D2615316FB3383002E57BB /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "C++98";
+			productName = HMDBExample4MacOSX;
+			productReference = 26D2615816FB3383002E57BB /* C++98 */;
+			productType = "com.apple.product-type.tool";
+		};
+		EBF387BD16EF853500FCAD7A /* C++11 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBF387CC16EF853500FCAD7A /* Build configuration list for PBXNativeTarget "C++11" */;
 			buildPhases = (
 				EBF387BA16EF853500FCAD7A /* Sources */,
 				EBF387BB16EF853500FCAD7A /* Frameworks */,
@@ -223,9 +268,9 @@
 			);
 			dependencies = (
 			);
-			name = HMDBExample4MacOSX;
+			name = "C++11";
 			productName = HMDBExample4MacOSX;
-			productReference = EBF387BE16EF853500FCAD7A /* HMDBExample4MacOSX */;
+			productReference = EBF387BE16EF853500FCAD7A /* C++11 */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -249,12 +294,24 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EBF387BD16EF853500FCAD7A /* HMDBExample4MacOSX */,
+				EBF387BD16EF853500FCAD7A /* C++11 */,
+				26D2614A16FB3383002E57BB /* C++98 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		26D2614B16FB3383002E57BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26D2614C16FB3383002E57BB /* main.mm in Sources */,
+				26D2614D16FB3383002E57BB /* HMDatabase.cpp in Sources */,
+				26D2614E16FB3383002E57BB /* HMError.cpp in Sources */,
+				26D2614F16FB3383002E57BB /* HMRecordSet.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EBF387BA16EF853500FCAD7A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -269,6 +326,30 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		26D2615616FB3383002E57BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HMDBExample4MacOSX/HMDBExample4MacOSX-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		26D2615716FB3383002E57BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HMDBExample4MacOSX/HMDBExample4MacOSX-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		EBF387CA16EF853500FCAD7A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -331,6 +412,7 @@
 		EBF387CD16EF853500FCAD7A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HMDBExample4MacOSX/HMDBExample4MacOSX-Prefix.pch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -340,6 +422,7 @@
 		EBF387CE16EF853500FCAD7A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HMDBExample4MacOSX/HMDBExample4MacOSX-Prefix.pch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -349,6 +432,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		26D2615516FB3383002E57BB /* Build configuration list for PBXNativeTarget "C++98" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26D2615616FB3383002E57BB /* Debug */,
+				26D2615716FB3383002E57BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		EBF387B916EF853500FCAD7A /* Build configuration list for PBXProject "HMDBExample4MacOSX" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -358,7 +450,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EBF387CC16EF853500FCAD7A /* Build configuration list for PBXNativeTarget "HMDBExample4MacOSX" */ = {
+		EBF387CC16EF853500FCAD7A /* Build configuration list for PBXNativeTarget "C++11" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EBF387CD16EF853500FCAD7A /* Debug */,
