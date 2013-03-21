@@ -10,7 +10,6 @@
 
 HMDBCPPDriverForAndroid::HMDBCPPDriverForAndroid() {
 	// TODO Auto-generated constructor stub
-
 }
 
 HMDBCPPDriverForAndroid::~HMDBCPPDriverForAndroid() {
