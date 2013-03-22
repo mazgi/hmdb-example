@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">HMDBExample4Android</string>
-    <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
+    <string name="run_button_text">run</string>
 
 </resources>

@@ -9,7 +9,7 @@ LOCAL_CPPFLAGS		:= $(LOCAL_CFLAGS)
 LOCAL_CPPFLAGS		+= -std=c++11
 LOCAL_CPP_FEATURES	+= rtti
 LOCAL_MODULE		:= HMDBCPPDriverForAndroid
-LOCAL_SRC_FILES		:= HMDBCPPDriverForAndroid.cpp
+LOCAL_SRC_FILES		:= HMDBCPPDriverForAndroid.cpp com_mazgi_example_hmdbexample4android_JNIBridge.cpp
 LOCAL_SRC_FILES		+= ../libs/sqlite3/sqlite3.c
 LOCAL_SRC_FILES		+= $(LOCAL_CXX_SRC_FILES:$(LOCAL_PATH)/%=%)
 LOCAL_C_INCLUDES	:= $(JNI_H_INCLUDE)
