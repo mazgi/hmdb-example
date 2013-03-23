@@ -12,6 +12,7 @@ class HMDBCPPDriverForAndroid {
 public:
 	HMDBCPPDriverForAndroid();
 	virtual ~HMDBCPPDriverForAndroid();
+	void run(const char* path);
 };
 
 #endif /* HMDBCPPDRIVERFORANDROID_H_ */

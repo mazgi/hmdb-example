@@ -1,0 +1,2 @@
+set solib-search-path ./obj/local/armeabi
+directory /Users/matsuki_hidenori/Applications/android-ndks/android-ndk.current/platforms/android-8/arch-arm/usr/include jni/../libs/sqlite3 jni/../../../hmdb/sources /Users/matsuki_hidenori/Applications/android-ndks/android-ndk.current/sources/cxx-stl/stlport/stlport /Users/matsuki_hidenori/Applications/android-ndks/android-ndk.current/sources/cxx-stl//gabi++/include
