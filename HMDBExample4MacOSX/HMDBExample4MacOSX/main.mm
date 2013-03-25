@@ -85,12 +85,19 @@ public:
                                                                         1.0, 2, HMDB_NULL, "str4", "str5"
                                                                         ));
             while (reader && reader->next()) {
+                HMLog("ID IS NULL:%d", reader->isNull("ID"));
+                HMLog("DBL_COL IS NULL:%d", reader->isNull("DBL_COL"));
+                HMLog("INT_COL IS NULL:%d", reader->isNull("INT_COL"));
+                HMLog("NULL_COL IS NULL:%d", reader->isNull("NULL_COL"));
+                HMLog("CHAR_COL IS NULL:%d", reader->isNull("CHAR_COL"));
+                HMLog("STR_COL IS NULL:%d", reader->isNull("STR_COL"));
+                
                 HMLog("ID:%d", reader->intValue("ID"));
                 HMLog("DBL_COL:%f", reader->doubleValue("DBL_COL"));
                 HMLog("INT_COL:%d", reader->intValue("INT_COL"));
-                HMLog("DBL_COL:%s", reader->textValue("NULL_COL"));
-                HMLog("DBL_COL:%s", reader->textValue("CHAR_COL"));
-                HMLog("DBL_COL:%s", reader->textValue("STR_COL"));
+                HMLog("NULL_COL:%s", reader->textValue("NULL_COL"));
+                HMLog("CHAR_COL:%s", reader->textValue("CHAR_COL"));
+                HMLog("STR_COL:%s", reader->textValue("STR_COL"));
             }
         }
         HMLog("BEGIN TRANSACTION[%d]", db->beginTransaction());
@@ -195,12 +202,19 @@ public:
                                                                ));
 #   endif
             while (reader && reader->next()) {
+                HMLog("ID IS NULL:%d", reader->isNull("ID"));
+                HMLog("DBL_COL IS NULL:%d", reader->isNull("DBL_COL"));
+                HMLog("INT_COL IS NULL:%d", reader->isNull("INT_COL"));
+                HMLog("NULL_COL IS NULL:%d", reader->isNull("NULL_COL"));
+                HMLog("CHAR_COL IS NULL:%d", reader->isNull("CHAR_COL"));
+                HMLog("STR_COL IS NULL:%d", reader->isNull("STR_COL"));
+
                 HMLog("ID:%d", reader->intValue("ID"));
                 HMLog("DBL_COL:%f", reader->doubleValue("DBL_COL"));
                 HMLog("INT_COL:%d", reader->intValue("INT_COL"));
-                HMLog("DBL_COL:%s", reader->textValue("NULL_COL"));
-                HMLog("DBL_COL:%s", reader->textValue("CHAR_COL"));
-                HMLog("DBL_COL:%s", reader->textValue("STR_COL"));
+                HMLog("NULL_COL:%s", reader->textValue("NULL_COL"));
+                HMLog("CHAR_COL:%s", reader->textValue("CHAR_COL"));
+                HMLog("STR_COL:%s", reader->textValue("STR_COL"));
             }
         }
         HMLog("BEGIN TRANSACTION[%d]", db->beginTransaction());
